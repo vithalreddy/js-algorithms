@@ -2,6 +2,7 @@
 
 //Objective: to shift every letter in given string by give number.
 //even negative value of number
+//only string with spaces are allowed for now.
 
 let caesarCipher = (str, num) => {
     num = num % 26; //IMP to convert numbr > or < 26
@@ -13,7 +14,7 @@ let caesarCipher = (str, num) => {
         if (currentLetter == ' ') {
             newString += currentLetter;
             continue;
-        }
+        };
         let currentIndex = alphabet.indexOf(currentLetter);
         let newIndex = currentIndex + num;
         if (newIndex > 25) newIndex = newIndex - 26; //start's from 0.
